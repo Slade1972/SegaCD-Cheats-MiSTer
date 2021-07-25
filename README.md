@@ -14,9 +14,9 @@ The cheat file format is slightly different for the Sega CD or Mega CD. The file
 
 `00 00 00 00` The first four bytes set the compare flag. This can be `01` for a standard compare with word write `00 00`, `02` for a byte write `00` with no compare and `03` with a byte write `00` with compare.
 
-`00 00 00 00` The second four bytes are the ram location in little endian (this is byte swapped from the Sega CD or Mega CD). If the ram location is in CD PRG Ram, you will need to append `FF` as the last byte. This is not required for 68K ram.
+`00 00 00 00` The second four bytes are the ram location in little endian (this is byte swapped from the Sega CD or Mega CD). If the ram location is in CD PRG Ram, you will need to append `FF` as the last byte. This is not required for 68K ram. The 68K ram is 64kBytes in length, meaning that the lowest ram location is `00 00` and the highest is `FF FF`. So all 68k ram locations will take up no more than two bytes of the address. The remainder should be filled with `00 00`.
 
-`00 00 00 00` The third four bytes are the compare value. This is only required if you set the compare bit.
+`00 00 00 00` The third four bytes are the compare value. This is only required if you set the compare bit and should be a byte `00` or word `00 00` value.
 
 `00 00 00 00` The final four bytes are the write value. This is either byte or word, in little endian. If you've set at `02` or `03` as the compare flag, then you'll write a byte value, otherwise word value. Trailing bytes should be `00 00`.
 
