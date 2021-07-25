@@ -1,4 +1,4 @@
-# SegaCD-Cheats-MiSTer-
+# SegaCD Cheats for MiSTer
 Cheat files for the Sega CD or Mega CD in .gg format compatible with MiSTer
 
 Gamehacking.org unfortunately does not have a large number of Sega CD or Mega CD cheats, and those it does have are not produced in a correct or compatible format for the MiSTer.
